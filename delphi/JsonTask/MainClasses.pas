@@ -99,7 +99,6 @@ begin
   Self.Clear;
 
 
-
   if FileExists(AFileName) then
   begin
 
@@ -153,7 +152,6 @@ begin
           end;  // if Assigned(JSONValue) and (JSONValue is TJSONArray)
 
         except
-          // if missed some mistake
         end;
       finally
         Jo.Free;
@@ -198,14 +196,15 @@ begin
 
       end;
 
-
-    try
-      TFile.WriteAllText(AFileName, Jo.ToString);
-    except
-      // if incorrect FileName
-    end;
-
       Result := True;
+
+      try
+        TFile.WriteAllText(AFileName, Jo.ToString);
+      except
+        // if incorrect FileName
+        Result := False;
+      end;
+
     except
     end;
   finally
@@ -241,7 +240,6 @@ begin
 
   // Clear before read
   Self.Clear;
-
 
   if FileExists(AFileName) then
   begin
@@ -306,7 +304,6 @@ begin
           end;  // if Assigned(JSONValue) and (JSONValue is TJSONArray)
 
         except
-          // if missed some mistake
         end;
       finally
         Jo.Free;
@@ -354,13 +351,15 @@ begin
 
       end;
 
+      Result := True;
+
       try
         TFile.WriteAllText(AFileName, Jo.ToString);
       except
         // if incorrect FileName
+        Result := False;
       end;
 
-      Result := True;
     except
     end;
 
@@ -402,8 +401,6 @@ begin
 
   // Clear before read
   Self.Clear;
-
-
 
   if FileExists(AFileName) then
   begin
@@ -459,7 +456,6 @@ begin
           end;  // if Assigned(JSONValue) and (JSONValue is TJSONArray)
 
         except
-          // if missed some mistake
         end;
       finally
         Jo.Free;
@@ -508,13 +504,16 @@ begin
 
       end;
 
+
+      Result := True;
+
       try
         TFile.WriteAllText(AFileName, Jo.ToString);
       except
         // if incorrect FileName
+        Result := False;
       end;
 
-      Result := True;
     except
     end;
 
