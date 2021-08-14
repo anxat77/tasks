@@ -1,0 +1,14 @@
+{
+"Driver":
+[
+{"ID": 1, "Name":"Frank Martin", "Phone":"555-0100"},
+{"ID": 2, "Name":"Travis Bickle", "Phone":"555-0123"},
+{"ID": 3, "Name":"Daniel Moralex", "Phone":"555-0130"}
+],
+"Auto":
+[
+{"ID": 1, "Brand":"Peugeot", "Model":"406", "Color":"White"},
+{"ID": 2, "Brand":"BMW", "Model":"735i", "Color":"Brown", "Number":"930UHV06"},
+{"ID": 3, "Brand":"Checker Taxi", "Color":"Yellow"}
+]
+}

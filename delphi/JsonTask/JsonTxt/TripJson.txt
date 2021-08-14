@@ -1,0 +1,8 @@
+{
+"Trip":
+[
+{"AutoID": 1, "DriverID": 2, "StartTime":"2021-01-15 22:00:00"},
+{"AutoID": 2, "DriverID": 3, "StartTime":"2021-05-05 12:00:00"},
+{"AutoID": 3, "DriverID": 1, "StartTime":"2021-07-25 02:00:00"}
+]
+}
