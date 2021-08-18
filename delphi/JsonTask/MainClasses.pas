@@ -91,13 +91,8 @@ var
 begin
   Result := False;
 
-  ID := -1;
-  Name := '';
-  Phone := '';
-
   // Clear before read
   Self.Clear;
-
 
   if FileExists(AFileName) then
   begin
@@ -121,6 +116,11 @@ begin
 
             for I := 0 to Ja.Count - 1 do
             begin
+              // default values
+              ID := -1;
+              Name := '';
+              Phone := '';
+
               JDriver := Ja.Items[I] as TJSONObject;
 
               if Assigned(JDriver) then
@@ -232,12 +232,6 @@ var
 begin
   Result := False;
 
-  ID := -1;
-  Brand := '';
-  Model := '';
-  Color := '';
-  Number := '';
-
   // Clear before read
   Self.Clear;
 
@@ -262,6 +256,13 @@ begin
 
             for I := 0 to Ja.Count - 1 do
             begin
+              // default values
+              ID := -1;
+              Brand := '';
+              Model := '';
+              Color := '';
+              Number := '';
+
               JAuto := Ja.Items[I] as TJSONObject;
 
               if Assigned(JAuto) then
@@ -394,11 +395,6 @@ begin
   AFormatSettings.LongDateFormat := 'yyyy-mm-dd';
   AFormatSettings.LongTimeFormat := 'hh:nn:ss';
 
-
-  AutoID := -1;
-  DriverID := -1;
-  StartTime := 0;
-
   // Clear before read
   Self.Clear;
 
@@ -424,6 +420,11 @@ begin
 
             for I := 0 to Ja.Count - 1 do
             begin
+              // default values
+              AutoID := -1;
+              DriverID := -1;
+              StartTime := 0;
+
               JTrip := Ja.Items[I] as TJSONObject;
 
               if Assigned(JTrip) then
